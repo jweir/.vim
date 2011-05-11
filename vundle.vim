@@ -7,6 +7,8 @@ call vundle#rc()
 Bundle "FuzzyFinder"
 Bundle "L9"
 Bundle "ack.vim"
+Bundle "git://github.com/jshint/jshint.git"
+Bundle "git://github.com/rygwdn/vim-conque"
 Bundle "git://git.wincent.com/command-t.git"
 Bundle "git://github.com/Lokaltog/vim-distinguished.git"
 Bundle "git://github.com/Lokaltog/vim-easymotion.git"

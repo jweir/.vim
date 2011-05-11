@@ -17,10 +17,10 @@
 
         " Prepare statusline arrows
         " Syntax: [>] [>>] [<] [<<]
-        let new_stl = substitute(new_stl, '\[>\]',  '/', 'g')
-        let new_stl = substitute(new_stl, '\[>>\]', '/ ', 'g')
-        let new_stl = substitute(new_stl, '\[<\]',  '\', 'g')
-        let new_stl = substitute(new_stl, '\[<<\]', '\', 'g')
+        let new_stl = substitute(new_stl, '\[>\]',  '›', 'g')
+        let new_stl = substitute(new_stl, '\[>>\]', '›', 'g')
+        let new_stl = substitute(new_stl, '\[<\]',  '‹', 'g')
+        let new_stl = substitute(new_stl, '\[<<\]', '‹', 'g')
 
         if &l:statusline ==# new_stl
           " Statusline already set, nothing to do
@@ -66,13 +66,13 @@
   " }}}
   " Default statusline {{{
     let g:default_stl  = ""
-    let g:default_stl .= "<CUR>#[Mode] %{&paste ? 'PASTE [>] ' : ''}%{mode()} #[ModeS][>>]</CUR>"
     let g:default_stl .= "#[Branch] %(%{substitute(fugitive#statusline(), 'GIT(\\([a-z0-9\\-_\\./:]\\+\\))', '\\1', 'gi')}#[BranchS] [>] %)" " Git branch
     let g:default_stl .= "#[FileName]%t " " File name
+    let g:default_stl .= "#[FileNameS][>>]" " Separator
+    "let g:default_stl .= "<CUR>#[Mode] %{&paste ? 'PASTE [>] ' : ''}%{mode()} #[ModeS][>>]</CUR>"
     let g:default_stl .= "<CUR>#[Error]%(%{substitute(SyntasticStatuslineFlag(), '\\[Syntax: line:\\(\\d\\+\\) \\((\\(\\d\\+\\))\\)\\?\\]', '[>][>][>] SYNTAX đ \\1 \\2 [>][>][>]', 'i')} %)</CUR>" " Syntastic error flag
     let g:default_stl .= "#[ModFlag]%(%M %)" " Modified flag
     let g:default_stl .= "#[BufFlag]%(%H%W %)" " HLP,PRV flags
-    let g:default_stl .= "#[FileNameS][>>]" " Separator
     let g:default_stl .= "#[FunctionName] " " Padding/HL group
     let g:default_stl .= "%<" " Truncate right
     let g:default_stl .= "<CUR>%(%{cfi#format('%s', '')} %)</CUR>" " Function name
