@@ -1,6 +1,14 @@
 " OSX: Specific keybindings
 if has("mac")
   
+  " Gestures:
+  nmap <SwipeLeft> :tabprevious<CR>
+  nmap <SwipeRight> :tabnext<CR>
+  nmap <SwipeUp> <Plug>RubyTestRunLast
+  nmap <D-SwipeUp> <Plug>RubyFileRun
+  nmap <SwipeDown> :NERDTree<CR>
+  nmap <D-SwipeDown> :NERDTreeFind<CR>
+  
   " TABS: safari style tab navigation
   nmap <D-[> :tabprevious<CR>
   nmap <D-]> :tabnext<CR>
@@ -34,7 +42,10 @@ if has("mac")
   macmenu &File.New\ Tab key=<nop>
 
   " Change Apple+T to TextMate Like Fuzzy Finder
-  nnoremap <D-t> :FufCoverageFile<CR>
+  " nnoremap <D-t> :FufCoverageFile<CR>
+  
+  " Change Apple+T to TextMate Like CommandT
+  nnoremap <D-t> :CommandT<CR>
 
   " Unmap Apple+Shift+T so we can...
   macmenu &File.Open\ Tab\.\.\. key=<nop>

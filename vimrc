@@ -10,3 +10,7 @@ source ~/.vim/auto_commands.vim
 if filereadable(expand("~/.vim/custom_vimrc"))
   source ~/.vim/custom_vimrc
 endif
+
+if filereadable(expand("session.vim"))
+  source session.vim 
+endif
