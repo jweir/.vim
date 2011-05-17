@@ -18,3 +18,6 @@ map <leader>f :Ack<Space>
 
 " ExitInsertMode: Alternative keybinding
 imap jj <Esc>
+
+" Highlighting
+map <C-n> :nohlsearch<CR>

@@ -64,7 +64,7 @@ Hi TabLine black dark
 Hi TabLineSel black neutral
 Hi VertSplit background- background-
 set fillchars=vert:_
-Hi StatusLine black cool NONE
+hi StatusLine guibg=#999999 guifg=black gui=NONE
 hi StatusLineNC guibg=#666666 guifg=black gui=NONE
 
 " -----

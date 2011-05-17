@@ -1,3 +1,6 @@
+set mouse=a
+set clipboard=unnamed
+
 let g:syntastic_enable_signs=1
 " Source:
 source ~/.vim/vundle.vim

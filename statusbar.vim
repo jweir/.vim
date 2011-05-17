@@ -66,7 +66,6 @@
   " }}}
   " Default statusline {{{
     let g:default_stl  = ""
-    let g:default_stl .= "#[Branch] %(%{substitute(fugitive#statusline(), 'GIT(\\([a-z0-9\\-_\\./:]\\+\\))', '\\1', 'gi')}#[BranchS] [>] %)" " Git branch
     let g:default_stl .= "#[FileName]%t " " File name
     let g:default_stl .= "#[FileNameS][>>]" " Separator
     "let g:default_stl .= "<CUR>#[Mode] %{&paste ? 'PASTE [>] ' : ''}%{mode()} #[ModeS][>>]</CUR>"
@@ -141,7 +140,7 @@ augroup StatusLineHighlight
 
   let s:round_stl = 0
 
-  au ColorScheme * call <SID>StatusLineColors(s:statuscolors)
+  "au ColorScheme * call <SID>StatusLineColors(s:statuscolors)
   au BufEnter,BufWinEnter,WinEnter,CmdwinEnter,CursorHold,BufWritePost,InsertLeave * call <SID>StatusLine((exists('b:stl') ? b:stl : g:default_stl), 'Normal', 1)
   au BufLeave,BufWinLeave,WinLeave,CmdwinLeave * call <SID>StatusLine((exists('b:stl') ? b:stl : g:default_stl), 'Normal', 0)
   au InsertEnter,CursorHoldI * call <SID>StatusLine((exists('b:stl') ? b:stl : g:default_stl), 'Insert', 1)
