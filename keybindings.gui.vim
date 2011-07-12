@@ -64,7 +64,7 @@ if has("mac")
   macmenu &File.Save key=<nop>
   imap <D-s> <Esc>:w<CR>
   map <D-s> :w<CR>
-
+  
   " bind command-/ to toggle comment
   " requires NERD Commenter to be installed: http://www.vim.org/scripts/script.php?script_id=1218
   nmap <D-/> ,c<Space>
