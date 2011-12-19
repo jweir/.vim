@@ -4,6 +4,7 @@ call vundle#rc()
 " Bundles:
 " Bundle "git://github.com/tpope/vim-markdown.git"
 " Bundle "git://github.com/vim-scripts/LustyExplorer.git"
+Bundle "nginx.vim"
 Bundle "FuzzyFinder"
 Bundle "L9"
 Bundle "ack.vim"
