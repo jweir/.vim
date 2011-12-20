@@ -18,3 +18,6 @@ endif
 if filereadable(expand("session.vim"))
   source session.vim 
 endif
+
+colorscheme railscasts
+

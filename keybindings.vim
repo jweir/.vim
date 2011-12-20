@@ -8,7 +8,6 @@ nnoremap Y y$
 nmap tp :tabprevious<CR>
 nmap tn :tabnext<CR>
 nmap te :tabedit 
-nmap to :tabonly<CR>
 nmap tN :tabnew<CR>
 
 " NERDTree: Open with F2
