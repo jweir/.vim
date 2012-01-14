@@ -4,6 +4,7 @@ call vundle#rc()
 " Bundles:
 " Bundle "git://github.com/tpope/vim-markdown.git"
 " Bundle "git://github.com/vim-scripts/LustyExplorer.git"
+Bundle "https://github.com/Lokaltog/vim-powerline.git"
 Bundle "https://github.com/altercation/vim-colors-solarized.git"
 Bundle "ctrlp.vim"
 " Bundle "https://github.com/vim-scripts/CSApprox"
