@@ -6,3 +6,7 @@ autocmd BufRead,BufNewFile {*.json}                                        set f
 " Clear trailing whitespace
 autocmd BufWritePre        {*.coffee,*.js}                                 :%s/\s\+$//e
 
+" Autoclose adjustments
+autocmd FileType ruby,javascript
+      \ let b:AutoClosePairs = AutoClose#DefaultPairsModified("", "<")
+

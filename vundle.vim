@@ -4,6 +4,8 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'gmarik/vundle'
+
 " Bundles:
 Bundle "https://github.com/altercation/vim-colors-solarized.git"
 Bundle "https://github.com/juvenn/mustache.vim.git"
@@ -38,3 +40,5 @@ Bundle "git://github.com/tpope/vim-surround.git"
 Bundle "git://github.com/tpope/vim-unimpaired.git"
 Bundle "git://github.com/tyru/current-func-info.vim.git"
 Bundle "git://github.com/vim-ruby/vim-ruby.git"
+
+filetype plugin indent on
