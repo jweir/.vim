@@ -21,3 +21,6 @@ imap jj <Esc>
 
 " Highlighting
 map <C-n> :nohlsearch<CR>
+
+" Replace word under cursor
+:nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
