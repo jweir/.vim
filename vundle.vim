@@ -1,21 +1,19 @@
-set runtimepath+=~/.vim/vundle.git
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " Bundles:
-" Bundle "git://github.com/tpope/vim-markdown.git"
-" Bundle "git://github.com/vim-scripts/LustyExplorer.git"
-Bundle "https://github.com/Lokaltog/vim-powerline.git"
 Bundle "https://github.com/altercation/vim-colors-solarized.git"
+Bundle "https://github.com/juvenn/mustache.vim.git"
+Bundle "https://github.com/Lokaltog/vim-powerline.git"
 Bundle "ctrlp.vim"
-" Bundle "https://github.com/vim-scripts/CSApprox"
 Bundle "git://github.com/vim-scripts/ZoomWin.git"
 Bundle "nginx.vim"
-Bundle "FuzzyFinder"
-Bundle "L9"
 Bundle "ack.vim"
+Bundle "https://github.com/tpope/vim-abolish.git"
 Bundle "git://github.com/kchmck/vim-coffee-script.git"
-Bundle "git://github.com/rygwdn/vim-conque"
-" Bundle "git://git.wincent.com/command-t.git"
 Bundle "git://github.com/Lokaltog/vim-distinguished.git"
 Bundle "git://github.com/Lokaltog/vim-easymotion.git"
 Bundle "git://github.com/Townk/vim-autoclose.git"
