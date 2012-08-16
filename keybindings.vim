@@ -16,6 +16,7 @@ nmap <F2> :NERDTreeToggle<CR>
 " AckVim: <leader>f to search
 map <leader>f :Ack<Space>
 
+nmap <leader>m :TagbarToggle<CR>
 " ExitInsertMode: Alternative keybinding
 imap jj <Esc>
 
