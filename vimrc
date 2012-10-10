@@ -18,3 +18,7 @@ endif
 if filereadable(expand("session.vim"))
   source session.vim 
 endif
+
+set rtp+=/usr/local/go/misc/vim
+filetype plugin indent on
+syntax on
