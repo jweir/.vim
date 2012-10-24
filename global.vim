@@ -97,7 +97,7 @@ set nohlsearch
 set wrapscan
 
 " assume the /g flag on :s substitutions to replace all matches in a line:
-set gdefault
+" set gdefault
 
 " Tags:
 
