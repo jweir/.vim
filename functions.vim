@@ -32,3 +32,4 @@ function! QuickFixOpenAll()
 endfunction
 
 command! QuickFixOpenAll         call QuickFixOpenAll()
+
