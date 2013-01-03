@@ -22,3 +22,6 @@ endif
 if filereadable(expand("session.vim"))
   source session.vim 
 endif
+
+" use Silver Searcher instead of ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
