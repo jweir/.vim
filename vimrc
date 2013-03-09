@@ -1,4 +1,4 @@
-set rtp+=/usr/local/go/misc/vim
+set rtp+=/usr/local/Cellar/go/1.0.3/misc/vim
 filetype plugin indent on
 syntax on
 
