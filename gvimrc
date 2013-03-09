@@ -20,8 +20,3 @@ set guioptions-=e
 
 " Don't flick cursor.
 set guicursor=a:blinkon0
-
-
-if filereadable(expand("~/.vim/custom_gvimrc"))
-  source ~/.vim/custom_gvimrc
-endif

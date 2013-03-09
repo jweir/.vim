@@ -15,10 +15,7 @@ let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 let tlist_clojure_settings = 'lisp;f:function'
 let Tlist_Exit_OnlyWindow=1
 
-" BClose
-nmap <Leader>x <Plug>Kwbd
-
-" golang tagbar
+" Go Tagbar
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [
