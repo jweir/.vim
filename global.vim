@@ -1,4 +1,17 @@
+" Go
+set rtp+=/usr/local/go/misc/vim
+filetype plugin indent on
+syntax on
+au FileType go au BufWritePre <buffer> Fmt
+autocmd FileType go let g:SuperTabDefaultCompletionType = "context"
+
+" Ruby
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+
 " General Settings:
+"
 
 scriptencoding utf-8                    " UTF8 All day, every day
 set directory=/tmp/                     " Set temporary directory (don't litter local dir with swp/tmp files)
@@ -30,7 +43,7 @@ set infercase
 
 set matchpairs+=<:>                     " Also match angle brackets
 
-" Mouse: 
+" Mouse:
 
 set nomousefocus                        " Don't focus the window when the mouse pointer is moved.
 set mousehide                           " Hide mouse pointer on insert mode.
@@ -49,7 +62,7 @@ set shiftwidth=2
 set shiftround
 
 set nonumber                            " Enable line numbers
-set numberwidth=3                       " Set line number column width 
+set numberwidth=3                       " Set line number column width
 
 " WindowAndBufferManagement:
 
@@ -121,3 +134,4 @@ set fo-=t " Do no auto-wrap text using textwidth (does not apply to comments)
 set t_Co=256
 
 set hidden
+
