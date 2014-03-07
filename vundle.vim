@@ -7,6 +7,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Bundles:
+Bundle "a.vim"
 Bundle "https://github.com/altercation/vim-colors-solarized.git"
 Bundle "https://github.com/Lokaltog/vim-powerline.git"
 Bundle "ctrlp.vim"
@@ -19,7 +20,6 @@ Bundle "git://github.com/kchmck/vim-coffee-script.git"
 Bundle "git://github.com/Lokaltog/vim-distinguished.git"
 Bundle "git://github.com/Townk/vim-autoclose.git"
 Bundle "git://github.com/cespare/vim-bclose.git"
-
 Bundle "https://github.com/majutsushi/tagbar"
 Bundle "git://github.com/ervandew/supertab.git"
 Bundle "git://github.com/godlygeek/tabular.git"
@@ -42,6 +42,8 @@ Bundle "git://github.com/tpope/vim-surround.git"
 Bundle "git://github.com/tpope/vim-unimpaired.git"
 Bundle "git://github.com/tyru/current-func-info.vim.git"
 Bundle "git://github.com/tpope/vim-endwise.git"
+Bundle "git://github.com/benmills/vim-golang-alternate"
+Bundle "git://github.com/dgryski/vim-godef"
 
 Bundle "git://github.com/nsf/gocode.git"
 Bundle "git://github.com/dgryski/vim-godef.git"
