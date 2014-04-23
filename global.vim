@@ -1,8 +1,4 @@
 " Go
-set rtp+=/usr/local/go/misc/vim
-filetype plugin indent on
-syntax on
-au FileType go au BufWritePre <buffer> Fmt
 autocmd FileType go let g:SuperTabDefaultCompletionType = "context"
 
 " Ruby
@@ -13,6 +9,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 " General Settings:
 "
 
+setlocal spell spelllang=en_us
 scriptencoding utf-8                    " UTF8 All day, every day
 set directory=/tmp/                     " Set temporary directory (don't litter local dir with swp/tmp files)
 
