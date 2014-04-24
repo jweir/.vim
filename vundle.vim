@@ -25,7 +25,6 @@ Bundle "https://github.com/majutsushi/tagbar"
 Bundle "git://github.com/ervandew/supertab.git"
 Bundle "git://github.com/godlygeek/tabular.git"
 
-Bundle "git://github.com/kchmck/vim-coffee-script.git"
 Bundle "git://github.com/pangloss/vim-javascript.git"
 
 Bundle "git://github.com/scrooloose/nerdcommenter.git"
