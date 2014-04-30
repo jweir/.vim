@@ -4,7 +4,7 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/vundle'
+Plugin 'Vundle.vim'
 
 " Bundles:
 Plugin 'a.vim'
@@ -20,7 +20,7 @@ Plugin 'https://github.com/tpope/vim-abolish.git'
 Plugin 'git://github.com/kchmck/vim-coffee-script.git'
 Plugin 'git://github.com/Lokaltog/vim-distinguished.git'
 Plugin 'git://github.com/Townk/vim-autoclose.git'
-Plugin 'git://github.com/cespare/vim-bclose.git'
+" Plugin 'git://github.com/cespare/vim-bclose.git'
 Plugin 'https://github.com/majutsushi/tagbar'
 Plugin 'git://github.com/ervandew/supertab.git'
 Plugin 'git://github.com/godlygeek/tabular.git'
@@ -37,7 +37,7 @@ Plugin 'git://github.com/tpope/vim-git.git'
 Plugin 'git://github.com/tpope/vim-haml.git'
 Plugin 'git://github.com/tpope/vim-rails.git'
 Plugin 'git://github.com/vim-ruby/vim-ruby.git'
-Plugin 'git://github.com/tpope/vim-rake.git'
+" Plugin 'git://github.com/tpope/vim-rake.git'
 Plugin 'git://github.com/tpope/vim-surround.git'
 Plugin 'git://github.com/tpope/vim-unimpaired.git'
 Plugin 'git://github.com/tyru/current-func-info.vim.git'

@@ -1,8 +1,0 @@
-set enc=utf-8
-set fillchars=vert:\ 
-highlight VertSplit ctermfg=DarkGray cterm=none gui=none
-
-syntax enable
-set background=dark
-colorscheme solarized
- 

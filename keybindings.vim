@@ -10,13 +10,6 @@ nmap tn :tabnext<CR>
 nmap te :tabedit 
 nmap tN :tabnew<CR>
 
-" NERDTree: Open with F2
-nmap <F2> :NERDTreeToggle<CR>
-
-" AckVim: <leader>f to search
-map <leader>f :Ack<Space>
-noremap <Leader>a :Ack <cword><cr>
-
 nmap <leader><leader> :TagbarToggle<CR>
 let g:tagbar_left = 1
 

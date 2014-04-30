@@ -1,7 +1,3 @@
-set rtp+=/usr/local/Cellar/go/1.0.3/misc/vim
-filetype plugin indent on
-syntax on
-
 set mouse=a
 set clipboard=unnamed
 
@@ -15,10 +11,14 @@ source ~/.vim/keybindings.vim
 source ~/.vim/plugin_config.vim
 source ~/.vim/auto_commands.vim
 
-if filereadable(expand("~/.vim/custom_vimrc"))
-  source ~/.vim/custom_vimrc
-endif
+set enc=utf-8
+set fillchars=vert:\ 
+highlight VertSplit ctermfg=DarkGray cterm=none gui=none
 
+syntax enable
+set background=dark
+colorscheme solarized
+ 
 if filereadable(expand("session.vim"))
   source session.vim 
 endif
