@@ -4,7 +4,7 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'Vundle.vim'
+Plugin 'gmarik/Vundle.vim'
 
 " Bundles:
 Plugin 'a.vim'
