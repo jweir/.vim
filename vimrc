@@ -16,7 +16,7 @@ highlight VertSplit ctermfg=DarkGray cterm=none gui=none
 
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme Tomorrow-Night
 
 
 let g:airline_left_sep=' '
