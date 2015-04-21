@@ -29,3 +29,6 @@ endif
 
 " use Silver Searcher instead of ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" have ctrlp use the gitignore settings
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
