@@ -35,6 +35,7 @@ Plugin 'git://github.com/tpope/vim-endwise.git'
 
 " Syntax
 Plugin 'git://github.com/scrooloose/syntastic.git'
+Plugin 'git://github.com/lepture/vim-jinja'
 
 " GO
 Plugin 'https://github.com/fatih/vim-go'
@@ -49,5 +50,11 @@ Plugin 'git://github.com/tpope/vim-haml.git'
 Plugin 'git://github.com/tpope/vim-rails.git'
 Plugin 'git://github.com/vim-ruby/vim-ruby.git'
 
+" Elixir
+Plugin 'git://github.com/elixir-lang/vim-elixir'
+Plugin 'chase/vim-ansible-yaml'
+
+Plugin 'git://github.com/markcornick/vim-bats.git'
+Plugin 'git://github.com/bkad/vim-terraform'
 call vundle#end()            " required
 filetype plugin indent on    " required

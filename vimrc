@@ -18,6 +18,8 @@ syntax enable
 set background=dark
 colorscheme Tomorrow-Night
 
+" Auto handle go imports
+let g:go_fmt_command = "goimports"
 
 let g:airline_left_sep=' '
 let g:airline_right_sep=' '
