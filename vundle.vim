@@ -45,6 +45,12 @@ Plugin 'https://github.com/benmills/vim-golang-alternate'
 Plugin 'git://github.com/kchmck/vim-coffee-script.git'
 Plugin 'git://github.com/pangloss/vim-javascript.git'
 
+" Typescript
+Plugin 'https://github.com/Shougo/vimproc.vim' "need to run make from its directory
+Plugin 'https://github.com/Quramy/tsuquyomi.git'
+Plugin 'https://github.com/leafgarland/typescript-vim'
+Plugin 'https://github.com/jason0x43/vim-js-indent'
+
 " Ruby and Rails
 Plugin 'git://github.com/tpope/vim-haml.git'
 Plugin 'git://github.com/tpope/vim-rails.git'
