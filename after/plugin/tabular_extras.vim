@@ -1,2 +1,4 @@
 " Tabular patterns
-AddTabularPattern hash /:\zs
+if exists(':AddTabularPattern')
+  AddTabularPattern hash /:\zs
+end
