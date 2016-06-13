@@ -1,5 +1,6 @@
 " Go
 autocmd FileType go let g:SuperTabDefaultCompletionType = "context"
+let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 
 " Ruby
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
