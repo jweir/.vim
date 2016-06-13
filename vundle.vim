@@ -60,7 +60,16 @@ Plugin 'git://github.com/vim-ruby/vim-ruby.git'
 Plugin 'git://github.com/elixir-lang/vim-elixir'
 Plugin 'chase/vim-ansible-yaml'
 
+" elm
+Plugin 'elmcast/elm-vim'
+
+" MISC
 Plugin 'git://github.com/markcornick/vim-bats.git'
 Plugin 'git://github.com/bkad/vim-terraform'
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+
+" OCAML Merlin
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
