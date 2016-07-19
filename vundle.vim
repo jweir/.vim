@@ -36,6 +36,7 @@ Plugin 'git://github.com/tpope/vim-endwise.git'
 " Syntax
 Plugin 'git://github.com/scrooloose/syntastic.git'
 Plugin 'git://github.com/lepture/vim-jinja'
+Plugin 'git://github.com/jvirtanen/vim-octave'
 
 " GO
 Plugin 'https://github.com/fatih/vim-go'
@@ -50,6 +51,7 @@ Plugin 'https://github.com/Shougo/vimproc.vim' "need to run make from its direct
 Plugin 'https://github.com/Quramy/tsuquyomi.git'
 Plugin 'https://github.com/leafgarland/typescript-vim'
 Plugin 'https://github.com/jason0x43/vim-js-indent'
+Plugin 'https://github.com/Shutnik/jshint2.vim'
 
 " Ruby and Rails
 Plugin 'git://github.com/tpope/vim-haml.git'
