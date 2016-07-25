@@ -16,7 +16,7 @@ highlight VertSplit ctermfg=DarkGray cterm=none gui=none
 
 syntax enable
 set background=dark
-colorscheme Tomorrow-Night
+colorscheme solarized
 
 " Auto handle go imports
 let g:go_fmt_command = "goimports"
