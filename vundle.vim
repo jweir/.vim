@@ -66,7 +66,6 @@ Plugin 'chase/vim-ansible-yaml'
 Plugin 'elmcast/elm-vim'
 
 " MISC
-Plugin 'git://github.com/markcornick/vim-bats.git'
 Plugin 'git://github.com/hashivim/vim-terraform'
 call vundle#end()            " required
 filetype plugin indent on    " required
