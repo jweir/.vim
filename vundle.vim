@@ -19,6 +19,7 @@ Plugin 'https://github.com/majutsushi/tagbar'
 " Navigation & Search
 Plugin 'ctrlp.vim'
 Plugin 'https://github.com/rking/ag.vim'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " VC
 Plugin 'git://github.com/tpope/vim-fugitive.git'
