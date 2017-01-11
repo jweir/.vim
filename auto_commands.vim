@@ -4,7 +4,7 @@ autocmd BufRead,BufNewFile {COMMIT_EDITMSG}                                set f
 autocmd BufRead,BufNewFile {*.clj}                                         set ft=clojure
 autocmd BufRead,BufNewFile {*.json}                                        set ft=javascript
 " Clear trailing whitespace
-autocmd BufWritePre        {*.coffee,*.js}                                 :%s/\s\+$//e
+autocmd BufWritePre        {*.coffee,*.js,*.rb}                            :%s/\s\+$//e
 
 " Autoclose adjustments
 autocmd FileType ruby,javascript
