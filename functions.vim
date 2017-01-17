@@ -4,6 +4,10 @@ function! s:RebuildTagsFile()
 endfunction
 command! -nargs=0 RebuildTagsFile call s:RebuildTagsFile()
 
+function! s:RubocopAuto()
+  silent !rubocop -a %
+endfunction
+command! -nargs=0 RubocopAuto call s:RubocopAuto()
 
 " Removes trailing spaces
 hi ExtraWhitespace guibg=#000000 
