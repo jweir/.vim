@@ -5,7 +5,7 @@ endfunction
 command! -nargs=0 RebuildTagsFile call s:RebuildTagsFile()
 
 function! s:RubocopAuto()
-  silent !rubocop -a %
+  !rubocop -a %
 endfunction
 command! -nargs=0 RubocopAuto call s:RubocopAuto()
 
