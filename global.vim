@@ -6,6 +6,7 @@ let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 
 " Elm
 let g:elm_setup_keybindings = 0
@@ -24,12 +25,6 @@ set directory=/tmp/                     " Set temporary directory (don't litter 
 
 " Set it to internal VIM Help
 set keywordprg=:help
-
-if v:version >= 703
-  " Set undofile.
-  set undofile
-  let &undodir=&directory
-endif
 
 " Enable filetype-specific indenting, syntax, and plugins
 filetype plugin indent on
