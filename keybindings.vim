@@ -1,6 +1,9 @@
 " Map Leader: Reset from \ to ,
 let mapleader = ","
 
+" Extends '%' match function to if/else, </>, etc. "
+:runtime macros/matchit.vim
+
 " Yank from the cursor to the end of the line, to be consistent with C and D.
 nnoremap Y y$
 
