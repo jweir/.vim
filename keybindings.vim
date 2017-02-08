@@ -25,7 +25,6 @@ map <C-n> :nohlsearch<CR>
 " Replace word under cursor
 :nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
-
 " Search for word under cursor
 :nnoremap <Leader>a :Ag <C-r><C-w><CR>
 

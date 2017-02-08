@@ -26,7 +26,7 @@ Plugin 'git://github.com/tpope/vim-fugitive.git'
 Plugin 'git://github.com/tpope/vim-git.git'
 
 " Editting
-Plugin 'git://github.com/ervandew/supertab.git'
+"Plugin 'git://github.com/ervandew/supertab.git'
 Plugin 'git://github.com/godlygeek/tabular.git'
 Plugin 'https://github.com/tpope/vim-abolish.git'
 Plugin 'git://github.com/Townk/vim-autoclose.git'
@@ -35,7 +35,8 @@ Plugin 'git://github.com/tpope/vim-unimpaired.git'
 Plugin 'git://github.com/tpope/vim-endwise.git'
 
 " Syntax
-Plugin 'git://github.com/scrooloose/syntastic.git'
+Plugin 'git://github.com/w0rp/ale'
+"Plugin 'git://github.com/scrooloose/syntastic.git'
 Plugin 'git://github.com/lepture/vim-jinja'
 Plugin 'git://github.com/jvirtanen/vim-octave'
 
@@ -44,15 +45,15 @@ Plugin 'https://github.com/fatih/vim-go'
 Plugin 'https://github.com/benmills/vim-golang-alternate'
 
 " JS
-Plugin 'git://github.com/kchmck/vim-coffee-script.git'
+"Plugin 'git://github.com/kchmck/vim-coffee-script.git'
 Plugin 'git://github.com/pangloss/vim-javascript.git'
 
 " Typescript
-Plugin 'https://github.com/Shougo/vimproc.vim' "need to run make from its directory
-Plugin 'https://github.com/Quramy/tsuquyomi.git'
-Plugin 'https://github.com/leafgarland/typescript-vim'
-Plugin 'https://github.com/jason0x43/vim-js-indent'
-Plugin 'https://github.com/Shutnik/jshint2.vim'
+"Plugin 'https://github.com/Shougo/vimproc.vim' "need to run make from its directory
+"Plugin 'https://github.com/Quramy/tsuquyomi.git'
+"Plugin 'https://github.com/leafgarland/typescript-vim'
+"Plugin 'https://github.com/jason0x43/vim-js-indent'
+"Plugin 'https://github.com/Shutnik/jshint2.vim'
 
 " Ruby and Rails
 Plugin 'git://github.com/tpope/vim-haml.git'

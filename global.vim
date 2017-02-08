@@ -10,11 +10,7 @@ let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 
 " Elm
 let g:elm_setup_keybindings = 0
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:elm_syntastic_show_warnings = 1
 let g:elm_format_autosave = 1
-let g:syntastic_elm_checkers = ['elm_make']
 
 " General Settings:
 "
@@ -89,15 +85,6 @@ set wildignore+=*.fam                  " Ignore compiled Falcon files
 " Always show status bar
 set laststatus=2
 
-" set statusline=\ "
-" set statusline+=%f\ " file name
-" set statusline+=[
-" set statusline+=%{strlen(&ft)?&ft:'none'} " filetype
-" set statusline+=]
-" set statusline+=%h%1*%m%r%w%0* " flag
-" set statusline+=%= " right align
-" set statusline+=%-14.(%l,%c%V%)\ %<%P " offset
-
 
 " Search:
 
@@ -135,4 +122,3 @@ set fo-=t " Do no auto-wrap text using textwidth (does not apply to comments)
 set t_Co=256
 
 set hidden
-
