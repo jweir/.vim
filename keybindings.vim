@@ -17,7 +17,7 @@ nmap <leader><leader> :TagbarToggle<CR>
 let g:tagbar_left = 1
 
 " ExitInsertMode: Alternative keybinding
-imap jj <Esc>
+imap jk <Esc>
 
 " Highlighting
 map <C-n> :nohlsearch<CR>
@@ -27,6 +27,8 @@ map <C-n> :nohlsearch<CR>
 
 " Search for word under cursor
 :nnoremap <Leader>a :Ag <C-r><C-w><CR>
+
+:nnoremap <leader>f :FZF<CR>
 
 " Show File
 nmap <Leader>r :NERDTreeFind<CR>

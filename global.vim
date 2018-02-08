@@ -1,6 +1,6 @@
 " Go
 autocmd FileType go let g:SuperTabDefaultCompletionType = "context"
-let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
+let g:ale_linters = {'go': ['gometalinter', 'gofmt']}
 
 " Ruby
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
@@ -14,6 +14,7 @@ let g:elm_format_autosave = 1
 
 " General Settings:
 "
+set guioptions= " disable scrollbars
 
 setlocal spell spelllang=en_us
 scriptencoding utf-8                    " UTF8 All day, every day
@@ -42,6 +43,11 @@ set matchpairs+=<:>                     " Also match angle brackets
 
 " Mouse:
 
+set mouse+=a
+if &term =~ '^screen'
+" tmux knows the extended mouse mode
+  set ttymouse=xterm2
+endif
 set nomousefocus                        " Don't focus the window when the mouse pointer is moved.
 set mousehide                           " Hide mouse pointer on insert mode.
 
@@ -58,7 +64,7 @@ set shiftwidth=2
 " Round indent by a multiple of shiftwidth in indent mode
 set shiftround
 
-set nonumber                            " Enable line numbers
+set nonumber                            " Disable line numbers
 set numberwidth=3                       " Set line number column width
 
 " WindowAndBufferManagement:
@@ -120,5 +126,33 @@ set fo-=r " Do not automatically insert a comment leader after an enter
 set fo-=t " Do no auto-wrap text using textwidth (does not apply to comments)
 
 set t_Co=256
-
 set hidden
+
+" misc
+
+set enc=utf-8
+set fillchars=vert:\|  
+highlight VertSplit ctermfg=DarkGray cterm=none gui=none
+
+syntax enable
+" set background=light
+silent! colorscheme true-monochrome-light
+" silent! colorscheme solarized 
+
+" Auto handle go imports
+let g:go_fmt_command = "goimports"
+
+let g:airline_left_sep=' '
+let g:airline_right_sep=' '
+
+" use Silver Searcher instead of ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" have ctrlp use the gitignore settings
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" OCAML Merlin
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
+
+set clipboard=unnamed

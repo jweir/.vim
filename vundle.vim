@@ -1,6 +1,7 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
+set rtp+=/usr/local/opt/fzf
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -20,6 +21,8 @@ Plugin 'https://github.com/majutsushi/tagbar'
 Plugin 'ctrlp.vim'
 Plugin 'https://github.com/rking/ag.vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'junegunn/fzf.vim'
+Plugin 'tpope/vim-rhubarb'
 
 " VC
 Plugin 'git://github.com/tpope/vim-fugitive.git'
