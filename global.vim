@@ -156,3 +156,8 @@ let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
 execute "set rtp+=" . g:opamshare . "/merlin/vim"
 
 set clipboard=unnamed
+
+" Goyo
+let g:goyo_width = '100%'
+let g:goyo_height = '100%'
+autocmd VimResized * if exists('#goyo') | exe "normal \<c-w>=" | endif

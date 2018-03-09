@@ -1,4 +1,4 @@
-"" thanks to greygrey from themebow for a running start!
+j"" thanks to greygrey from themebow for a running start!
 "" http://themebow.com/theme/313
 "" find me online at:
 "" https://github.com/ryanpcmcquen/true-monochrome_vim
@@ -17,26 +17,27 @@ let colors_name="true-monochrome-light"
 set background=light
 
 
-hi IncSearch       guifg=#000000    guibg=#FFCC00    ctermfg=yellow    ctermbg=red    gui=ITALIC       cterm=NONE
-hi Search          guifg=#000000    guibg=#FFCC00    ctermfg=yellow    ctermbg=red    gui=ITALIC       cterm=NONE
-hi Visual          guifg=#000000    guibg=#FFCC00    ctermfg=yellow    ctermbg=red    gui=ITALIC       cterm=NONE
-hi VisualNOS       guifg=#000000    guibg=#FFCC00    ctermfg=yellow    ctermbg=red    gui=ITALIC       cterm=NONE
+hi IncSearch       guifg=#000000    guibg=#FFCC00    ctermfg=black    ctermbg=yellow    gui=ITALIC       cterm=NONE
+hi Search          guifg=#000000    guibg=#FFCC00    ctermfg=black    ctermbg=yellow    gui=ITALIC       cterm=NONE
+hi Visual          guifg=#000000    guibg=#FFCC00    ctermfg=black    ctermbg=yellow    gui=ITALIC       cterm=NONE
+hi VisualNOS       guifg=#000000    guibg=#FFCC00    ctermfg=black    ctermbg=yellow    gui=ITALIC       cterm=NONE
 
-hi ALEErrorLine        guifg=#000000    guibg=#FFCC00    ctermfg=black    ctermbg=white    gui=ITALIC       cterm=BOLD
-hi ALEWarningLine      guifg=#000000    guibg=#FFCC00    ctermfg=black    ctermbg=white    gui=ITALIC       cterm=BOLD
+hi ALEErrorLine        guifg=#FFFFFF    guibg=#996600    ctermfg=black    ctermbg=white    gui=ITALIC       cterm=BOLD
+hi ALEWarningLine      guifg=#000000    guibg=#FFEECC    ctermfg=black    ctermbg=white    gui=ITALIC       cterm=BOLD
 hi ALEInfoLine         guifg=#000000    guibg=#FFCC00    ctermfg=black    ctermbg=white    gui=ITALIC       cterm=BOLD
 
-hi ALEErrorSign        guifg=#000000    guibg=#FFCC00    ctermfg=red    ctermbg=white    gui=ITALIC       cterm=BOLD
-hi ALEWarningSign      guifg=#000000    guibg=#FFCC00    ctermfg=red    ctermbg=white    gui=ITALIC       cterm=BOLD
-hi ALEInfoSign         guifg=#000000    guibg=#FFCC00    ctermfg=red    ctermbg=white    gui=ITALIC       cterm=BOLD
-hi ALEStyleErrorSign   guifg=#000000    guibg=#FFCC00    ctermfg=red    ctermbg=white    gui=ITALIC       cterm=BOLD
-hi ALEStyleWarningSign guifg=#000000    guibg=#FFCC00    ctermfg=red    ctermbg=white    gui=ITALIC       cterm=BOLD
+hi ALEErrorSign        guifg=#000000    guibg=#FF9900    ctermfg=red    ctermbg=white    gui=ITALIC       cterm=BOLD
+hi ALEWarningSign      guifg=#000000    guibg=#FF9900    ctermfg=red    ctermbg=white    gui=ITALIC       cterm=BOLD
+hi ALEInfoSign         guifg=#000000    guibg=#FF9900    ctermfg=red    ctermbg=white    gui=ITALIC       cterm=BOLD
+hi ALEStyleErrorSign   guifg=#000000    guibg=#FF9900    ctermfg=red    ctermbg=white    gui=ITALIC       cterm=BOLD
+hi ALEStyleWarningSign guifg=#000000    guibg=#FF9900    ctermfg=red    ctermbg=white    gui=ITALIC       cterm=BOLD
 
-hi ALEWarning        guifg=#000000    guibg=#FFCC00    ctermfg=red    ctermbg=white    gui=ITALIC       cterm=BOLD
+hi ALEWarning        guifg=#000000    guibg=#FFAA00    ctermfg=red    ctermbg=white    gui=ITALIC       cterm=BOLD
 
-hi Cursor          guifg=#000000    guibg=#FFCC00    ctermfg=yellow    ctermbg=red    gui=NONE         cterm=NONE
+hi Cursor          guifg=#000000    guibg=#00CCFF    ctermfg=yellow    ctermbg=red    gui=NONE         cterm=NONE
 hi CursorColumn    guifg=#000000    guibg=#FFCC00    ctermfg=black     ctermbg=red    gui=NONE         cterm=NONE
-hi CursorLine      guifg=#000000    guibg=#FFCC00    ctermfg=black     ctermbg=red    gui=NONE         cterm=NONE
+" spring green
+hi CursorLine      guifg=#000000    guibg=#FFEECC    ctermfg=black     ctermbg=42   gui=NONE         cterm=NONE 
 
 hi Comment         guifg=#495057    guibg=#FFFFFF    ctermfg=gray     ctermbg=white    gui=ITALIC       cterm=NONE
 hi DiffChange      guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
@@ -50,7 +51,7 @@ hi Identifier      guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=w
 hi Ignore          guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi Label           guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=BOLD         cterm=BOLD
 hi LineNr          guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
-hi MatchParen      guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
+hi MatchParen      guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=yellow    gui=NONE         cterm=BOLD
 hi ModeMsg         guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi MoreMsg         guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi NonText         guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
@@ -77,15 +78,15 @@ hi TypeDef         guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=w
 hi Underlined      guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=UNDERLINE    cterm=UNDERLINE
 hi VertSplit       guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi WarningMsg      guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
-hi WildMenu        guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
+hi WildMenu        guifg=#495057    guibg=#FFFFFF    ctermfg=white     ctermbg=black    gui=NONE         cterm=NONE
 hi cucumberTags    guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=BOLD         cterm=BOLD
 hi htmlTagN        guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=BOLD         cterm=BOLD
 hi rubySymbol      guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 
-"" black fg w/white bg
 hi Constant        guifg=#495057    guibg=#FFFFFF    ctermfg=black    ctermbg=white    gui=NONE         cterm=NONE
 hi DiffAdd         guifg=#495057    guibg=#FFFFFF    ctermfg=black    ctermbg=white    gui=NONE         cterm=NONE
 hi Number          guifg=#495057    guibg=#FFFFFF    ctermfg=black    ctermbg=white    gui=NONE         cterm=NONE
-hi Pmenu           guifg=#495057    guibg=#FFFFFF    ctermfg=black    ctermbg=white    gui=BOLD         cterm=BOLD
+hi Pmenu           guifg=#495057    guibg=#EEEEFF    ctermfg=gray    ctermbg=black    gui=BOLD         cterm=NONE
+hi PmenuSel        guifg=#495057    guibg=#FFFFEE    ctermfg=white    ctermbg=black    gui=BOLD         cterm=BOLD
 hi String          guifg=#495057    guibg=#FFFFFF    ctermfg=black    ctermbg=white    gui=NONE         cterm=NONE
 
