@@ -1,3 +1,13 @@
+" misc
+
+set enc=utf-8
+set fillchars=vert:\|  
+highlight VertSplit ctermfg=DarkGray cterm=none gui=none
+
+syntax on
+set background=dark
+silent! colorscheme true-monochrome
+
 " Go
 autocmd FileType go let g:SuperTabDefaultCompletionType = "context"
 let g:ale_linters = {'go': ['gometalinter', 'gofmt']}
@@ -26,7 +36,6 @@ set keywordprg=:help
 " Enable filetype-specific indenting, syntax, and plugins
 filetype plugin indent on
 set nocompatible
-syntax on
 
 set vb t_vb=                            " Disable visual bell
 set autoread                            " Set to auto read when a file is changed from the outside
@@ -128,16 +137,6 @@ set fo-=t " Do no auto-wrap text using textwidth (does not apply to comments)
 set t_Co=256
 set hidden
 
-" misc
-
-set enc=utf-8
-set fillchars=vert:\|  
-highlight VertSplit ctermfg=DarkGray cterm=none gui=none
-
-syntax enable
-" set background=light
-silent! colorscheme true-monochrome-light
-" silent! colorscheme solarized 
 
 " Auto handle go imports
 let g:go_fmt_command = "goimports"
@@ -151,13 +150,13 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 " have ctrlp use the gitignore settings
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
-" OCAML Merlin
-let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" . g:opamshare . "/merlin/vim"
-
 set clipboard=unnamed
 
 " Goyo
 let g:goyo_width = '100%'
 let g:goyo_height = '100%'
 autocmd VimResized * if exists('#goyo') | exe "normal \<c-w>=" | endif
+
+" prolog
+let g:filetype_pl="prolog"
+

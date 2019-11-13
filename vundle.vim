@@ -27,6 +27,7 @@ Plugin 'tpope/vim-rhubarb'
 " VC
 Plugin 'git://github.com/tpope/vim-fugitive.git'
 Plugin 'git://github.com/tpope/vim-git.git'
+Plugin 'junegunn/gv.vim'
 
 " Editting
 "Plugin 'git://github.com/ervandew/supertab.git'
@@ -64,7 +65,7 @@ Plugin 'git://github.com/tpope/vim-rails.git'
 Plugin 'git://github.com/vim-ruby/vim-ruby.git'
 
 " Elixir
-Plugin 'git://github.com/elixir-lang/vim-elixir'
+Plugin 'elixir-editors/vim-elixir'
 Plugin 'chase/vim-ansible-yaml'
 
 " elm
@@ -73,10 +74,9 @@ Plugin 'elmcast/elm-vim'
 " MISC
 Plugin 'junegunn/goyo.vim'
 Plugin 'git://github.com/hashivim/vim-terraform'
+Plugin 'tpope/vim-db'
+Plugin 'JuliaEditorSupport/julia-vim'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-
-" OCAML Merlin
-let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" . g:opamshare . "/merlin/vim"

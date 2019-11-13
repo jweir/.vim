@@ -13,6 +13,8 @@ nmap tn :tabnext<CR>
 nmap te :tabedit 
 nmap tN :tabnew<CR>
 
+nmap cp :let @+ = expand("%")<CR>
+
 nmap <leader><leader> :TagbarToggle<CR>
 let g:tagbar_left = 1
 
@@ -29,6 +31,7 @@ map <C-n> :nohlsearch<CR>
 :nnoremap <Leader>a :Ag <C-r><C-w><CR>
 
 :nnoremap <leader>f :FZF<CR>
+:nnoremap <leader>b :Buffers<CR>
 
 " Show File
 nmap <Leader>r :NERDTreeFind<CR>

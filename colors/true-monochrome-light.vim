@@ -16,7 +16,7 @@ endif
 let colors_name="true-monochrome-light"
 set background=light
 
-
+" General colors
 hi IncSearch       guifg=#000000    guibg=#FFCC00    ctermfg=black    ctermbg=yellow    gui=ITALIC       cterm=NONE
 hi Search          guifg=#000000    guibg=#FFCC00    ctermfg=black    ctermbg=yellow    gui=ITALIC       cterm=NONE
 hi Visual          guifg=#000000    guibg=#FFCC00    ctermfg=black    ctermbg=yellow    gui=ITALIC       cterm=NONE
@@ -46,40 +46,51 @@ hi DiffText        guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=w
 hi Directory       guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi Error           guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi Folded          guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
-hi Function        guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=BOLD         cterm=BOLD
+hi Function        guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi Identifier      guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi Ignore          guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
-hi Label           guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=BOLD         cterm=BOLD
+hi Label           guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi LineNr          guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi MatchParen      guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=yellow    gui=NONE         cterm=BOLD
 hi ModeMsg         guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi MoreMsg         guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi NonText         guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
+
 hi Normal          guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
+if has('gui_running') || has('nvim') 
+    hi Normal 		guifg=#495057 guibg=#FFFFFF else
+    " Set the terminal default background and foreground colors, thereby
+    " improving performance by not needing to set these colors on empty cells.
+    " hi Normal guifg=NONE guibg=NONE ctermfg=NONE ctermbg=NONE
+    " let &t_ti = &t_ti . "\033]10;#495057\007\033]11;
+    " FFFFFF\007"
+    " let &t_te = &t_te . "\033]100\007\033]111\007"
+    let &t_ut=''
+endif
+
 hi PmenuSbar       guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi PmenuSel        guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=ITALIC       cterm=NONE
 hi PmenuThumb      guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
-hi PreProc         guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=BOLD         cterm=BOLD
-hi Special         guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=BOLD         cterm=BOLD
+hi PreProc         guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
+hi Special         guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi SpecialKey      guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=ITALIC       cterm=NONE
-hi Statement       guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=BOLD         cterm=BOLD
-hi StatusLine      guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=BOLD         cterm=BOLD
+hi Statement       guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
+hi StatusLine      guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi StatusLineNC    guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=ITALIC       cterm=NONE
-hi StorageClass    guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=BOLD         cterm=BOLD
-hi Structure       guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=BOLD         cterm=BOLD
+hi StorageClass    guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
+hi Structure       guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi TabLine         guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi TabLineFill     guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi TabLineSel      guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=BOLD         cterm=BOLD
 hi Title           guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi Todo            guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=BOLD         cterm=BOLD
 hi Todo            guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=UNDERLINE    cterm=UNDERLINE
-hi Type            guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=BOLD         cterm=BOLD
-hi TypeDef         guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=BOLD         cterm=BOLD
+hi Type            guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
+hi TypeDef         guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi Underlined      guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=UNDERLINE    cterm=UNDERLINE
 hi VertSplit       guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi WarningMsg      guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 hi WildMenu        guifg=#495057    guibg=#FFFFFF    ctermfg=white     ctermbg=black    gui=NONE         cterm=NONE
-hi cucumberTags    guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=BOLD         cterm=BOLD
 hi htmlTagN        guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=BOLD         cterm=BOLD
 hi rubySymbol      guifg=#495057    guibg=#FFFFFF    ctermfg=black     ctermbg=white    gui=NONE         cterm=NONE
 
