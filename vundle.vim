@@ -39,6 +39,7 @@ Plugin 'git://github.com/tpope/vim-unimpaired.git'
 Plugin 'git://github.com/tpope/vim-endwise.git'
 
 " Syntax
+" Plugin 'git://github.com/neoclide/coc.nvim'
 Plugin 'git://github.com/w0rp/ale'
 "Plugin 'git://github.com/scrooloose/syntastic.git'
 Plugin 'git://github.com/lepture/vim-jinja'
