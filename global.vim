@@ -1,26 +1,27 @@
 " misc
 
 set enc=utf-8
-set fillchars=vert:\|  
+set fillchars=vert:\|
 highlight VertSplit ctermfg=DarkGray cterm=none gui=none
 
 syntax on
 set background=dark
 silent! colorscheme true-monochrome
 
+" Prolog
+let g:filetype_pl="prolog"
+
 " Go
 autocmd FileType go let g:SuperTabDefaultCompletionType = "context"
-let g:ale_linters = {'go': ['gometalinter', 'gofmt']}
 
 " Ruby
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 
 " Elm
-let g:elm_setup_keybindings = 0
-let g:elm_format_autosave = 1
+" let g:elm_setup_keybindings = 0
+" let g:elm_format_autosave = 1
 
 " General Settings:
 "
@@ -152,11 +153,59 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 
 set clipboard=unnamed
 
-" Goyo
-let g:goyo_width = '100%'
-let g:goyo_height = '100%'
-autocmd VimResized * if exists('#goyo') | exe "normal \<c-w>=" | endif
+" elm
+let g:ale_elm_ls_use_global = 1
+let g:ale_elm_ls_executable = "/usr/local/bin/elm-language-server"
+let g:ale_elm_ls_elm_analyse_trigger = 'change'
 
-" prolog
-let g:filetype_pl="prolog"
-
+" ALE
+let g:ale_completion_tsserver_autoimport = 1
+let g:ale_fixers = {
+\ '*': ['remove_trailing_lines', 'trim_whitespace'],
+\ 'css': ['stylelint'],
+\ 'elm': ['elm-format'],
+\ 'go': ['gofmt', 'goimports'],
+\ 'html': ['prettier'],
+\ 'javascript': ['eslint'],
+\ 'json': ['prettier'],
+\ 'markdown': ['prettier'],
+\ 'python': ['autopep8', 'isort'],
+\ 'ruby': ['rubocop'],
+\ 'scss': ['stylelint'],
+\ 'sass': ['stylelint'],
+\ 'typescript': ['eslint'],
+\ 'vue': ['prettier'],
+\ 'xml': ['xmllint'],
+\ 'yml': ['prettier'],
+\}
+let g:ale_fix_on_save = 1
+let g:ale_linter_aliases = {'js': 'ts'}
+let g:ale_linter_aliases = {'ts': 'js'}
+let g:ale_linters = {
+\ 'css': ['stylelint'],
+\ 'dockerfile': ['dockerfile_lint'],
+\ 'elm': ['elm_ls', 'make'],
+\ 'eruby': ['erubylint'],
+\ 'gitcommit': ['gitlint'],
+\ 'go': ['gometalinter', 'gofmt', 'golangci_lint'],
+\ 'haml': ['hamllint'],
+\ 'html': ['stylelint'],
+\ 'javascript': ['eslint', 'prettier'],
+\ 'json': ['jsonlint'],
+\ 'make': ['checkmake'],
+\ 'markdown': ['markdownlint'],
+\ 'python': ['flake8', 'pylint'],
+\ 'ruby': ['rubocop'],
+\ 'scss': ['stylelint'],
+\ 'sass': ['stylelint'],
+\ 'typescript': ['eslint', 'tsserver', 'typecheck'],
+\ 'vue': ['vls'],
+\ 'xml': ['xmllint'],
+\ 'yml': ['yamllint'],
+\}
+let g:ale_linters_explicit = 1
+let g:ale_set_highlights = 1
+highlight ALEError ctermbg=NONE ctermfg=red
+highlight ALEErrorSign ctermbg=NONE ctermfg=red
+highlight ALEWarning ctermbg=NONE ctermfg=yellow
+highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
