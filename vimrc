@@ -1,32 +1,32 @@
 call plug#begin()
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'bling/vim-airline'
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-git'
-Plug 'tpope/vim-rhubarb'
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'bling/vim-airline'
+  Plug 'scrooloose/nerdcommenter'
+  Plug 'scrooloose/nerdtree'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-git'
+  Plug 'tpope/vim-rhubarb'
+  Plug 'rking/ag.vim'
 
-" Editting
+  " Editting
 
-Plug 'dense-analysis/ale'
-Plug 'godlygeek/tabular'
-Plug 'tpope/vim-abolish'
-Plug 'Townk/vim-autoclose'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-endwise'
+  Plug 'dense-analysis/ale'
+  Plug 'godlygeek/tabular'
+  Plug 'tpope/vim-abolish'
+  Plug 'Townk/vim-autoclose'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-unimpaired'
+  Plug 'tpope/vim-endwise'
 
-" JS
-Plug 'pangloss/vim-javascript'
+  " JS
+  Plug 'pangloss/vim-javascript'
 
-" Ruby and Rails
-Plug 'tpope/vim-haml'
-Plug 'tpope/vim-rails'
-Plug 'vim-ruby/vim-ruby'
-
+  " Ruby and Rails
+  Plug 'tpope/vim-haml'
+  Plug 'tpope/vim-rails'
+  Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
 " Basic
@@ -56,6 +56,8 @@ set nowrap                              " Disable line wrapping
 
 let mapleader = ","
 
+highlight VertSplit ctermfg=DarkGray cterm=none gui=none
+
 " use indents of 2 spaces, and have them copied down lines:
 set expandtab
 set tabstop=2
@@ -68,10 +70,14 @@ set nonumber                            " Disable line numbers
 set numberwidth=3                       " Set line number column width
 
 " Keybindings
-:nnoremap <leader>f :FZF<CR>
-:nmap <Leader>r :NERDTreeFind<CR>
-:nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+nnoremap <leader>f :FZF<CR>
+nmap <Leader>r :NERDTreeFind<CR>
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
+nmap tp :tabprevious<CR>
+nmap tn :tabnext<CR>
+nmap te :tabedit
+nmap tN :tabnew<CR>
 "
 " ALE
 "
