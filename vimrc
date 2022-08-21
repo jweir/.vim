@@ -29,45 +29,40 @@ call plug#begin()
   Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
-" Basic
 set clipboard=unnamed
-
 set mouse+=a
+set nomousefocus                        " Don't focus the window when the mouse pointer is moved.
+set mousehide                           " Hide mouse pointer on insert mode.
+
 if &term =~ '^screen'
 " tmux knows the extended mouse mode
   set ttymouse=xterm2
 endif
-set nomousefocus                        " Don't focus the window when the mouse pointer is moved.
-set mousehide                           " Hide mouse pointer on insert mode.
 
 set enc=utf-8
+scriptencoding utf-8                    " UTF8 All day, every day
 set fillchars=vert:\|
-highlight VertSplit ctermfg=DarkGray cterm=none gui=none
 
 syntax on
 set background=dark
-silent! colorscheme true-monochrome
+silent! colorscheme quiet " true-monochrome
+highlight VertSplit ctermfg=DarkGray cterm=none gui=none
 
-scriptencoding utf-8                    " UTF8 All day, every day
 set directory=/tmp/                     " Set temporary directory (don't litter local dir with swp/tmp files)
-
 set noswapfile                          " No swap files when editing please
 set nowrap                              " Disable line wrapping
 
 let mapleader = ","
-
-highlight VertSplit ctermfg=DarkGray cterm=none gui=none
 
 " use indents of 2 spaces, and have them copied down lines:
 set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-" Round indent by a multiple of shiftwidth in indent mode
-set shiftround
+
+set shiftround " Round indent by a multiple of shiftwidth in indent mode
 
 set nonumber                            " Disable line numbers
-set numberwidth=3                       " Set line number column width
 
 " Keybindings
 nnoremap <leader>f :FZF<CR>
@@ -78,23 +73,21 @@ nmap tp :tabprevious<CR>
 nmap tn :tabnext<CR>
 nmap te :tabedit
 nmap tN :tabnew<CR>
+
 "
 " ALE
 "
 
 let g:ale_fixers = {
 \ '*': ['remove_trailing_lines', 'trim_whitespace'],
-\ 'css': ['stylelint'],
 \ 'go': ['gofmt', 'goimports'],
 \ 'html': ['prettier'],
 \ 'javascript': ['eslint'],
 \ 'json': ['prettier'],
 \ 'markdown': ['prettier'],
-\ 'python': ['autopep8', 'isort'],
 \ 'ruby': ['rubocop'],
 \ 'scss': ['stylelint'],
 \ 'sass': ['stylelint'],
-\ 'typescript': ['eslint'],
 \ 'vue': ['prettier'],
 \ 'xml': ['xmllint'],
 \ 'yml': ['prettier'],
@@ -102,22 +95,15 @@ let g:ale_fixers = {
 
 let g:ale_linters = {
 \ 'css': ['stylelint'],
-\ 'dockerfile': ['dockerfile_lint'],
-\ 'eruby': ['erubylint'],
 \ 'gitcommit': ['gitlint'],
 \ 'go': ['gometalinter', 'gofmt', 'golangci_lint'],
 \ 'haml': ['hamllint'],
 \ 'html': ['stylelint'],
 \ 'javascript': ['eslint', 'prettier'],
 \ 'json': ['jsonlint'],
-\ 'make': ['checkmake'],
-\ 'markdown': ['markdownlint'],
-\ 'python': ['flake8', 'pylint'],
 \ 'ruby': ['rubocop'],
 \ 'scss': ['stylelint'],
 \ 'sass': ['stylelint'],
-\ 'typescript': ['eslint', 'tsserver', 'typecheck'],
-\ 'vue': ['vls'],
 \ 'xml': ['xmllint'],
 \ 'yml': ['yamllint'],
 \}
@@ -221,19 +207,9 @@ nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
 
-" Run the Code Lens action on the current line.
-nmap <leader>cl  <Plug>(coc-codelens-action)
+" Run the Code Lens action on the current line. (not supported in vim)
+" nmap <leader>cl  <Plug>(coc-codelens-action)
 
-" Map function and class text objects
-" NOTE: Requires 'textDocument.documentSymbol' support from the language server.
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-xmap ic <Plug>(coc-classobj-i)
-omap ic <Plug>(coc-classobj-i)
-xmap ac <Plug>(coc-classobj-a)
-omap ac <Plug>(coc-classobj-a)
 
 " Remap <C-f> and <C-b> for scroll float windows/popups.
 if has('nvim-0.4.0') || has('patch-8.2.0750')
