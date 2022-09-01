@@ -52,6 +52,13 @@ set directory=/tmp/                     " Set temporary directory (don't litter 
 set noswapfile                          " No swap files when editing please
 set nowrap                              " Disable line wrapping
 
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_altv = &spl
+let g:netrw_winsize = 20
+
 let mapleader = ","
 
 " use indents of 2 spaces, and have them copied down lines:
@@ -60,13 +67,20 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 
+set splitbelow                          " Open new horizontal split windows below current
+set splitright                          " Open new vertical split windows to the right
+
 set shiftround " Round indent by a multiple of shiftwidth in indent mode
 
 set nonumber                            " Disable line numbers
 
+
+
 " Keybindings
 nnoremap <leader>f :FZF<CR>
-nmap <Leader>r :NERDTreeFind<CR>
+nmap <Leader>rr :NERDTreeFind<CR>
+nmap <Leader>sr :Sexplore<CR>
+nmap <Leader>hr :Vexplore<CR>
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 nmap tp :tabprevious<CR>
