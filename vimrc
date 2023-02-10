@@ -9,9 +9,9 @@ call plug#begin()
   Plug 'tpope/vim-git'
   Plug 'tpope/vim-rhubarb'
   Plug 'rking/ag.vim'
+  Plug 'unisonweb/unison', { 'branch': 'trunk', 'rtp': 'editor-support/vim' }
 
   " Editting
-
   Plug 'dense-analysis/ale'
   Plug 'godlygeek/tabular'
   Plug 'tpope/vim-abolish'
@@ -28,6 +28,8 @@ call plug#begin()
   Plug 'tpope/vim-rails'
   Plug 'vim-ruby/vim-ruby'
 call plug#end()
+
+let mapleader = ","
 
 set clipboard=unnamed
 set mouse+=a
@@ -46,6 +48,7 @@ set fillchars=vert:\|
 syntax on
 set background=dark
 silent! colorscheme quiet " true-monochrome
+hi Comment ctermfg=150
 highlight VertSplit ctermfg=DarkGray cterm=none gui=none
 
 set directory=/tmp/                     " Set temporary directory (don't litter local dir with swp/tmp files)
@@ -59,7 +62,6 @@ let g:netrw_altv = 1
 let g:netrw_altv = &spl
 let g:netrw_winsize = 20
 
-let mapleader = ","
 
 " use indents of 2 spaces, and have them copied down lines:
 set expandtab
@@ -79,8 +81,6 @@ set nonumber                            " Disable line numbers
 " Keybindings
 nnoremap <leader>f :FZF<CR>
 nmap <Leader>rr :NERDTreeFind<CR>
-nmap <Leader>sr :Sexplore<CR>
-nmap <Leader>hr :Vexplore<CR>
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 nmap tp :tabprevious<CR>
@@ -130,6 +130,8 @@ highlight ALEErrorSign ctermbg=NONE ctermfg=red
 highlight ALEWarning ctermbg=NONE ctermfg=yellow
 highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 
+" Custom Command
+command! Scratch new | setlocal bt=nofile bh=wipe nobl noswapfile nu
 
 "
 " CoC

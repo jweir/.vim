@@ -87,5 +87,3 @@ hi Number          guifg=#D0D0EE    guibg=#111111    ctermfg=white    ctermbg=bl
 hi Pmenu           guifg=#D0D0EE    guibg=#222222    ctermfg=white    ctermbg=gray    gui=NONE         cterm=NONE
 hi PmenuSel        guifg=#333344    guibg=#DDDDDD    ctermfg=black    ctermbg=white    gui=NONE         cterm=NONE
 hi String          guifg=#D0D0EE    guibg=#111111    ctermfg=white    ctermbg=black    gui=NONE         cterm=NONE
-
-
