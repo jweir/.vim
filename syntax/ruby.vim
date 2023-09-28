@@ -3,7 +3,7 @@ if exists('b:sorbet_syntax')
 endif
 
 syntax region SigBlock matchgroup=SigBlockDelimiter start="{" end="}" contained
-syntax region SigBlock matchgroup=SigBlockDelimiter start="\<do\>" end="\<end\>" contained transparent skipwhite
+syntax region SigBlock matchgroup=SigBlockDelimiter start="\<do\>" end="\<end\>" contained
 
 " Prevent sorbet elements from being contained by vim-ruby elements.
 syntax cluster rubyNotTop add=SigBlock

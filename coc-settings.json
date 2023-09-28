@@ -3,6 +3,11 @@
     "elm"
   ],
   "languageserver": {
+    "golang": {
+        "command": "gopls",
+        "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+        "filetypes": ["go"]
+        },
     "elmLS": {
       "command": "elm-language-server",
       "filetypes": [

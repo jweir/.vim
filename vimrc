@@ -23,6 +23,10 @@ call plug#begin()
   " JS
   Plug 'pangloss/vim-javascript'
 
+  Plug 'cakebaker/scss-syntax.vim'
+  " Go
+  Plug 'fatih/vim-go'
+
   " Ruby and Rails
   Plug 'tpope/vim-haml'
   Plug 'tpope/vim-rails'
@@ -76,7 +80,7 @@ set shiftround " Round indent by a multiple of shiftwidth in indent mode
 
 set nonumber                            " Disable line numbers
 
-
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " Keybindings
 nnoremap <leader>f :FZF<CR>
@@ -215,8 +219,11 @@ augroup end
 
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+xmap <leader>as <Plug>(coc-codeaction-selected)
+nmap <leader>as <Plug>(coc-codeaction-selected)
+
+xmap <leader>al <Plug>(coc-codeaction-line)
+nmap <leader>al <Plug>(coc-codeaction-line)
 
 " Remap keys for applying codeAction to the current buffer.
 nmap <leader>ac  <Plug>(coc-codeaction)
