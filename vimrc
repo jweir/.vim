@@ -1,4 +1,5 @@
 call plug#begin()
+
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -10,6 +11,7 @@ call plug#begin()
   Plug 'tpope/vim-rhubarb'
   Plug 'rking/ag.vim'
   Plug 'unisonweb/unison', { 'branch': 'trunk', 'rtp': 'editor-support/vim' }
+  Plug 'preservim/tagbar'
 
   " Editting
   Plug 'dense-analysis/ale'
@@ -31,6 +33,9 @@ call plug#begin()
   Plug 'tpope/vim-haml'
   Plug 'tpope/vim-rails'
   Plug 'vim-ruby/vim-ruby'
+
+  " LLM Code assistance
+  Plug 'ggml-org/llama.vim'
 call plug#end()
 
 let mapleader = ","
@@ -123,7 +128,6 @@ let g:ale_linters = {
 \ 'scss': ['stylelint'],
 \ 'sass': ['stylelint'],
 \ 'xml': ['xmllint'],
-\ 'yml': ['yamllint'],
 \}
 
 let g:ale_fix_on_save = 1
@@ -201,6 +205,7 @@ endfunction
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)

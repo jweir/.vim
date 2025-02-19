@@ -1,8 +1,17 @@
 {
   "coc.preferences.formatOnSaveFiletypes": [
-    "elm"
+    "elm",
+    "css"
   ],
   "languageserver": {
+    "sorbet": {
+        "command": "ssh",
+        "args": ["deploy@dev.pharosams.com",
+          "srb tc --lsp --enable-all-experimental-lsp-features --enable-experimental-requires-ancestor /data/pharos/ams/current"
+        ], 
+        "filetypes": ["ruby"],
+        "rootPatterns": ["sorbet/config"]
+    },
     "golang": {
         "command": "gopls",
         "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
