@@ -38,6 +38,8 @@ call plug#begin()
   Plug 'ggml-org/llama.vim'
 call plug#end()
 
+let g:llama_config = { 'show_info': 0 }
+
 let mapleader = ","
 
 set clipboard=unnamed
